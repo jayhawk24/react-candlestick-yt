@@ -1,10 +1,20 @@
 import './App.css'
 
+import LiveChart from './LiveChart'
+
+
+
 function App() {
+
 
   return (
     <>
-      Stock Candlestick Chart
+      <h1>
+        Stock Candlestick Chart
+      </h1>
+      <div style={{ width: "100vh", height: "100%" }}>
+        <LiveChart symbol='IBM' />
+      </div>
     </>
   )
 }
