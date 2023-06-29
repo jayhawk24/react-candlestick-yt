@@ -22,7 +22,8 @@ const options = {
     },
 };
 
-const LiveChart = (symbol) => {
+// eslint-disable-next-line react/prop-types
+const LiveChart = ({ symbol }) => {
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -32,11 +33,9 @@ const LiveChart = (symbol) => {
         }
         getData()
     }
-        , [])
+        , [symbol])
 
-    const chartData = useMemo(() => {
-        formatWeeklyData(data)
-    }, [data])
+    const chartData = useMemo(() => formatWeeklyData(data), [data])
 
     return (
         <ReactApexChart
