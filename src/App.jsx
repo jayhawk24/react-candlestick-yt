@@ -1,10 +1,14 @@
 import './App.css'
+import LiveChart from './LiveChart'
 
 function App() {
 
   return (
     <>
-      Stock Candlestick Chart
+      <h1>
+        Stock Candlestick Chart
+      </h1>
+      <LiveChart symbol={'IBM'} />
     </>
   )
 }
